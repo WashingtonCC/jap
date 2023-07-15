@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  --snow: #fffbfeff;
+  --emerald: #26c485ff;
+  --dark-cyan: #32908fff;
+  --blue: #724cf9ff;
+  --black: #000000ff;
+
+  --gradient-top: linear-gradient(
+    0deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-right: linear-gradient(
+    90deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-bottom: linear-gradient(
+    180deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-left: linear-gradient(
+    270deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-top-right: linear-gradient(
+    45deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-bottom-right: linear-gradient(
+    135deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-top-left: linear-gradient(
+    225deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-bottom-left: linear-gradient(
+    315deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-radial: radial-gradient(
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+}
+
+body {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--blue);
+}
+
+.header {
+  height: 4rem;
+  width: 100%;
+  background-color: var(--black);
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--snow);
+  z-index: 2;
+}
+
+.header::after {
+  position: absolute;
+  bottom: -3px;
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    #fd004c,
+    #fe9000,
+    #fff020,
+    #3edf4b,
+    #3363ff,
+    #b102b7
+  );
+}
+
+.header__title {
+  /* font-family: "VT323", monospace; */
+  font-size: 3rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.main {
+  padding: 0 5rem;
+}
+
+.main__desc {
+  text-align: center;
+}
+
+.main__desc {
+}
+
+.footer {
+  width: 100%;
+  background-color: var(--snow);
+  height: 4rem;
+  background-color: var(--black);
+}
+
+.title {
+  position: relative;
+  display: inline-block;
+  font-family: "Roboto Mono";
+}
+
+.title-box::before {
+  /* content: "root@c3sar:~# "; */
+  content: "[root@c3sar ~]$";
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.title::before,
+.title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.title::before {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--snow);
+}
+
+.title-1::before,
+.title-2::before {
+  animation: typewriter 2s steps(7) infinite;
+}
+
+.title-3::before {
+  animation: typewriter 3s steps(10) infinite;
+}
+
+.title-4::before {
+  animation: typewriter 3s steps(9) infinite;
+}
+
+.title::after {
+  top: 0.5rem;
+  bottom: 0.2rem;
+  width: 0.2rem;
+  background: black;
+}
+
+.title-1::after,
+.title-2::after {
+  animation: typewriter 2s steps(7) infinite, 0.5s blink infinite;
+}
+
+.title-3::after {
+  animation: typewriter 3s steps(10) infinite, 0.5s blink infinite;
+}
+
+.title-4::after {
+  animation: typewriter 3s steps(9) infinite, 0.5s blink infinite;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+.card {
+  padding: 1rem 2rem;
+  margin: 2rem;
+  background-color: var(--snow);
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.main__skills {
+}
+
+.main__skills-imgs-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.main__skill-img {
+  justify-self: center;
+  position: relative;
+  transition: all 0.3s;
+  padding: 1rem;
+}
+
+.main__skill-img img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: scale-down;
+}
+
+.main__skill-img::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transform: translateY(101%);
+  transition: all 0.5s;
+  background: var(--blue);
+  opacity: 0.5;
+}
+
+.main__skill-img:hover {
+  cursor: pointer;
+  filter: grayscale(50%);
+}
+
+.main__skill-img-1:hover::after {
+  transform: translateY(20%);
+}
+
+.main__skill-img-2:hover::after {
+  transform: translateY(10%);
+}
+
+.main__skill-img-3:hover::after {
+  transform: translateY(20%);
+}
+
+.main__skill-img-4:hover::after {
+  transform: translateY(20%);
+}
+
+.main__skill-img-5:hover::after {
+  transform: translateY(20%);
+}
+
+.main__skill-img-6:hover::after {
+  transform: translateY(15%);
+}

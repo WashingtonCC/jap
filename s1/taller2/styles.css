@@ -1,0 +1,28 @@
+html {
+    color: white;
+}
+
+body {
+    background-color: green;
+}
+
+.main {
+    background-color: red;
+}
+
+.paragraph {
+    background-color: blue;
+}
+
+.btn {
+    color: white;
+    background-color: rgb(77, 175, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: .2rem .5rem;
+}
+
+.btn:hover {
+    background-color: blue;
+}

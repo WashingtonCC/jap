@@ -1,0 +1,27 @@
+/* subgrupo 2 */
+body {
+    background-color: lightgreen;
+}
+
+.rojo {
+    background-color: red;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+}
+
+.img-box {
+    background-color: yellow;
+    width: 30%;
+    border: 10px solid red;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+#link {
+    background-color: white;
+    padding: 8px;
+    border: 2px solid black;
+}
