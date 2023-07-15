@@ -130,9 +130,21 @@ body {
 
 .main__desc {
   text-align: center;
+  display: flex;
 }
 
-.main__desc {
+.main__desc-photo {
+  background-color: lightpink;
+  width: 8rem;
+  height: 8rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 3px solid var(--blue);
+}
+
+.main__desc-photo img {
+  width: 100%;
 }
 
 .footer {
@@ -285,4 +297,8 @@ body {
 
 .main__skill-img-6:hover::after {
   transform: translateY(15%);
+}
+
+.main__education-body ul {
+  list-style: none;
 }
