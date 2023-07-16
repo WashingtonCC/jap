@@ -84,20 +84,47 @@
 body {
   position: relative;
   font-family: "Montserrat", sans-serif;
-  background-color: var(--blue);
+}
+
+.bg-img-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.bg-img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.bg-img-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--blue);
+  opacity: 0.2;
 }
 
 .header {
   height: 4rem;
-  width: 100%;
   background-color: var(--black);
   position: sticky;
   top: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
   color: var(--snow);
   z-index: 2;
+  justify-content: space-between;
+}
+
+.header > * {
+  padding: 2rem;
 }
 
 .header::after {
@@ -135,8 +162,8 @@ body {
 
 .main__desc-photo {
   background-color: lightpink;
-  width: 8rem;
-  height: 8rem;
+  width: 12rem;
+  height: 12rem;
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 100%;
