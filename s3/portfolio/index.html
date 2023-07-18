@@ -32,7 +32,22 @@
     </div>
     <header class="header">
       <h1 class="header__title">c3sar</h1>
-      <nav class="header__nav">Contact</nav>
+      <nav class="header__nav">
+        <a
+          href="https://github.com/WashingtonCC"
+          id="github-contact"
+          target="blank"
+        >
+          <div class="header__contact-img">
+            <img src="images/github-white.png" alt="github" />
+          </div>
+        </a>
+        <a href="mailto:aa4549807@gmail.com" id="email-contact" target="blank">
+          <div class="header__contact-img">
+            <img src="images/gmail.png" alt="gmail" />
+          </div>
+        </a>
+      </nav>
     </header>
     <main class="main">
       <div class="main__desc card">
@@ -56,10 +71,6 @@
       </div>
 
       <div class="main__skills card">
-        <p>
-          try to do the clip to image thing, that would look
-          <strong>much</strong> better
-        </p>
         <div class="title-box">
           <h1 class="title title-2">skills.</h1>
         </div>
@@ -92,25 +103,50 @@
         <div class="main__education-body">
           <ul>
             <li>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Assumenda, odio.
+              <h4>
+                1st year of Computer Engineering at FING, UDELAR (coursing)
+              </h4>
             </li>
-            <li>Lorem ipsum dolor sit amet consectetur.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur.</li>
+            <li><h4>Jóvenes a Programar (coursing phase two)</h4></li>
+            <li>
+              <h4>
+                Udemy courses on: Advanced CSS/SASS, Django, Django REST
+                Framework, JavaScript, React.JS
+              </h4>
+            </li>
+            <li><h4>C1 Advanced English Certificate</h4></li>
           </ul>
         </div>
       </div>
 
-      <div class="proyects card">
-        <div class="title-box">
+      <div class="main__proyects">
+        <div class="title-box card">
           <h1 class="title title-4">proyects.</h1>
         </div>
-        <div class="proyects__body">
-          <p>
-            cards with videos playing showing the project. on hover, the cards
-            turn and info about the project is shown
-          </p>
+        <div class="main__proyects-body">
+          <div class="main__proyect-video card">
+            <video src="videos/bb.mp4" autoplay loop></video>
+            <p>
+              <em><strong>ByteBusters</strong></em> is a blog page created to
+              have fun and share interesting things with the world. Anything you
+              like or find fascinating, post it! You can interact with people,
+              read and create posts and much more!
+            </p>
+            <p>
+              <strong>Technologies:</strong> HTML, CSS (SASS), React.JS, Django,
+              PostgreSQL, Docker.
+            </p>
+          </div>
+
+          <div class="main__proyect-video card">
+            <video src="videos/maze.mp4" autoplay loop></video>
+            <p>
+              <em><strong>Maze</strong></em> is a Python program that takes as
+              input two dimensions, generates a maze with those dimensions, and
+              saves it to a png.
+            </p>
+            <p><strong>Technologies:</strong> Python.</p>
+          </div>
         </div>
       </div>
     </main>

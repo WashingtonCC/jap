@@ -151,8 +151,33 @@ body {
   margin: 0;
 }
 
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+#github-contact {
+  margin-right: 1rem;
+}
+
+.header__contact-img {
+  max-height: 2.2rem;
+  max-width: 2.2rem;
+}
+
+.header__contact-img img {
+  width: 100%;
+  transition: all 0.2s;
+}
+
+.header__contact-img img:hover {
+  filter: opacity(50%) grayscale(100%);
+}
+
 .main {
   padding: 0 5rem;
+  max-width: 100rem;
+  margin: 0 auto;
 }
 
 .main__desc {
@@ -285,6 +310,27 @@ body {
   object-fit: scale-down;
 }
 
+.main__education-body ul {
+  list-style: none;
+}
+
+.main__proyects-body {
+  display: flex;
+}
+
+.main__proyect-video {
+  width: 40rem;
+  transition: all 1s;
+  position: relative;
+  overflow: hidden;
+}
+
+.main__proyect-video video {
+  width: 100%;
+}
+
+/*Animations for skills images (commented for now, will finish later)*/
+/*
 .main__skill-img::after {
   position: absolute;
   content: "";
@@ -295,32 +341,38 @@ body {
   background: var(--blue);
   opacity: 0.5;
   mask-size: cover;
+  -webkit-mask-size: cover;
   transition: all 1s;
-  /* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); */
 }
 
 .main__skill-img-1::after {
   mask-image: url("images/html.png");
+  -webkit-mask-image: url("images/html.png");
 }
 
 .main__skill-img-2::after {
   mask-image: url("images/css.png");
+  -webkit-mask-image: url("images/css.png");
 }
 
 .main__skill-img-3::after {
   mask-image: url("images/js.png");
+  -webkit-mask-image: url("images/js.png");
 }
 
 .main__skill-img-4::after {
   mask-image: url("images/react.png");
+  -webkit-mask-image: url("images/react.png");
 }
 
 .main__skill-img-5::after {
   mask-image: url("images/python.png");
+  -webkit-mask-image: url("images/python.png");
 }
 
 .main__skill-img-6::after {
   mask-image: url("images/django.png");
+  -webkit-mask-image: url("images/django.png");
 }
 
 .main__skill-img-1:hover::after {
@@ -346,7 +398,6 @@ body {
 .main__skill-img-6:hover::after {
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
 }
+*/
 
-.main__education-body ul {
-  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
-}
+/*Add skills like docker, github, linux, and turn it into a slide*/
