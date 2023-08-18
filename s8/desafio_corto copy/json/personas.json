@@ -1,0 +1,50 @@
+[
+  {
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "edad": 30,
+    "ciudad": "Montevideo",
+    "pais": "Uruguay",
+    "trabajo": "Desarrollador Web"
+  },
+  {
+    "nombre": "María",
+    "apellido": "Gómez",
+    "edad": 17,
+    "ciudad": "Montevideo",
+    "pais": "Uruguay",
+    "trabajo": "Estudiante"
+  },
+  {
+    "nombre": "Roberto",
+    "apellido": "Fernández",
+    "edad": 28,
+    "ciudad": "Ciudad de México",
+    "pais": "Uruguay",
+    "trabajo": "Ingeniero Civil"
+  },
+  {
+    "nombre": "Ana",
+    "apellido": "López",
+    "edad": 25,
+    "ciudad": "Buenos Aires",
+    "pais": "Argentina",
+    "trabajo": "Diseñadora Gráfica"
+  },
+  {
+    "nombre": "Luis",
+    "apellido": "García",
+    "edad": 22,
+    "ciudad": "Lima",
+    "pais": "Perú",
+    "trabajo": "Estudiante"
+  },
+  {
+    "nombre": "Elena",
+    "apellido": "Martínez",
+    "edad": 19,
+    "ciudad": "Asunción",
+    "pais": "Paraguay",
+    "trabajo": "Estudiante"
+  }
+]

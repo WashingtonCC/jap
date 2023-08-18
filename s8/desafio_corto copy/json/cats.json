@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "nombre": "Tecnología",
+    "descripcion": "Trabajos relacionados con la industria tecnológica.",
+    "trabajos": [
+      "Desarrollador Web",
+      "Ingeniero de Software",
+      "Analista de Datos"
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Diseño",
+    "descripcion": "Trabajos creativos y de diseño.",
+    "trabajos": ["Diseñador Gráfico", "Diseñador de Interfaz", "Ilustrador"]
+  },
+  {
+    "id": 3,
+    "nombre": "Ingeniería",
+    "descripcion": "Trabajos relacionados con la ingeniería y la construcción.",
+    "trabajos": ["Ingeniero Civil", "Ingeniero Mecánico", "Ingeniero Eléctrico"]
+  },
+  {
+    "id": 4,
+    "nombre": "Educación",
+    "descripcion": "Trabajos en el campo de la educación y la enseñanza.",
+    "trabajos": ["Profesor", "Tutor Educativo", "Investigador Educativo"]
+  },
+  {
+    "id": 5,
+    "nombre": "Estudiantes",
+    "descripcion": "Trabajos temporales para estudiantes.",
+    "trabajos": ["Cajero/a", "Mesero/a", "Repartidor/a"]
+  }
+]
