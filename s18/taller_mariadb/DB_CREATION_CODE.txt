@@ -1,0 +1,57 @@
+/* Delimiter changed to ; */
+/* Connecting to 127.0.0.1 via MariaDB or MySQL (TCP/IP), username root, using password: Yes ... */
+SELECT CONNECTION_ID();
+SHOW VARIABLES;
+/* Characterset: utf8mb4 */
+SHOW /*!50002 GLOBAL */ STATUS;
+SELECT NOW();
+/* Connected. Thread-ID: 3 */
+/* Reading function definitions from C:\Program Files (x86)\Common Files\MariaDBShared\HeidiSQL\functions-mariadb.ini */
+SHOW TABLES FROM `information_schema`;
+SHOW DATABASES;
+/* Entering session "Unnamed" */
+/* Scaling controls to screen DPI: 100% */
+SHOW COLLATION;
+CREATE DATABASE `planning` /*!40100 COLLATE 'latin1_swedish_ci' */;
+SHOW DATABASES;
+/* Entering session "Unnamed" */
+USE `planning`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='planning';
+SHOW TABLE STATUS FROM `planning`;
+SHOW FUNCTION STATUS WHERE `Db`='planning';
+SHOW PROCEDURE STATUS WHERE `Db`='planning';
+SHOW TRIGGERS FROM `planning`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='planning';
+SHOW ENGINES;
+SHOW VARIABLES;
+/* #91: Access violation at address 00010000. Execution of address 00010000 Message CharCode:13 Msg:256 */
+/* #22: Access violation at address 00010000. Execution of address 00010000 Message CharCode:13 Msg:256 */
+/* #47: Access violation at address 00010000. Execution of address 00010000 Message CharCode:13 Msg:256 */
+/* #92: Access violation at address 00010000. Execution of address 00010000 Message CharCode:13 Msg:256 */
+/* #44: Access violation at address 00010000. Execution of address 00010000 Message CharCode:13 Msg:256 */
+/* #68: Access violation at address 00010000. Execution of address 00010000 Message CharCode:13 Msg:256 */
+CREATE TABLE `todo` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL,
+	`description` TEXT NOT NULL,
+	`created_at` DATE NOT NULL,
+	`updated_at` DATE NOT NULL,
+	`status` VARCHAR(50) NOT NULL,
+	PRIMARY KEY (`id`)
+)
+COLLATE='latin1_swedish_ci'
+;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='planning';
+SHOW TABLE STATUS FROM `planning`;
+SHOW FUNCTION STATUS WHERE `Db`='planning';
+SHOW PROCEDURE STATUS WHERE `Db`='planning';
+SHOW TRIGGERS FROM `planning`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='planning';
+SELECT * FROM `information_schema`.`COLUMNS` WHERE TABLE_SCHEMA='planning' AND TABLE_NAME='todo' ORDER BY ORDINAL_POSITION;
+SHOW INDEXES FROM `todo` FROM `planning`;
+SELECT * FROM information_schema.REFERENTIAL_CONSTRAINTS WHERE   CONSTRAINT_SCHEMA='planning'   AND TABLE_NAME='todo'   AND REFERENCED_TABLE_NAME IS NOT NULL;
+SELECT * FROM information_schema.KEY_COLUMN_USAGE WHERE   TABLE_SCHEMA='planning'   AND TABLE_NAME='todo'   AND REFERENCED_TABLE_NAME IS NOT NULL;
+SHOW CREATE TABLE `planning`.`todo`;
+SELECT CONSTRAINT_NAME, CHECK_CLAUSE FROM `information_schema`.`CHECK_CONSTRAINTS` WHERE CONSTRAINT_SCHEMA='planning' AND TABLE_NAME='todo';
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `planning`.`todo`;
