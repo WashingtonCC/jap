@@ -1,0 +1,54 @@
+CREATE DATABASE `blog` /*!40100 COLLATE 'latin1_swedish_ci' */;
+SHOW DATABASES;
+/* Entering session "Unnamed" */
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='blog';
+SHOW TABLE STATUS FROM `blog`;
+SHOW FUNCTION STATUS WHERE `Db`='blog';
+SHOW PROCEDURE STATUS WHERE `Db`='blog';
+SHOW TRIGGERS FROM `blog`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='blog';
+USE `blog`;
+SHOW VARIABLES;
+CREATE TABLE `posts` (
+	`title` CHAR(50) NOT NULL,
+	`body` TEXT NOT NULL,
+	`id` INT NOT NULL AUTO_INCREMENT,
+	PRIMARY KEY (`id`)
+)
+COLLATE='latin1_swedish_ci'
+;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='blog';
+SHOW TABLE STATUS FROM `blog`;
+SHOW FUNCTION STATUS WHERE `Db`='blog';
+SHOW PROCEDURE STATUS WHERE `Db`='blog';
+SHOW TRIGGERS FROM `blog`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='blog';
+SELECT * FROM `information_schema`.`COLUMNS` WHERE TABLE_SCHEMA='blog' AND TABLE_NAME='posts' ORDER BY ORDINAL_POSITION;
+SHOW INDEXES FROM `posts` FROM `blog`;
+SELECT * FROM information_schema.REFERENTIAL_CONSTRAINTS WHERE   CONSTRAINT_SCHEMA='blog'   AND TABLE_NAME='posts'   AND REFERENCED_TABLE_NAME IS NOT NULL;
+SELECT * FROM information_schema.KEY_COLUMN_USAGE WHERE   TABLE_SCHEMA='blog'   AND TABLE_NAME='posts'   AND REFERENCED_TABLE_NAME IS NOT NULL;
+SHOW CREATE TABLE `blog`.`posts`;
+SELECT CONSTRAINT_NAME, CHECK_CLAUSE FROM `information_schema`.`CHECK_CONSTRAINTS` WHERE CONSTRAINT_SCHEMA='blog' AND TABLE_NAME='posts';
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `blog`.`posts`;
+/* #81: Access violation at address 00010000. Execution of address 00010000 Message CharCode:13 Msg:256 */
+/* #59: Access violation at address 00010000. Execution of address 00010000 Message CharCode:13 Msg:256 */
+ALTER TABLE `posts`
+	ADD COLUMN `created_at` DATE NOT NULL AFTER `id`,
+	ADD COLUMN `updated_at` DATE NOT NULL AFTER `created_at`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='blog';
+SHOW TABLE STATUS FROM `blog`;
+SHOW FUNCTION STATUS WHERE `Db`='blog';
+SHOW PROCEDURE STATUS WHERE `Db`='blog';
+SHOW TRIGGERS FROM `blog`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='blog';
+SELECT * FROM `information_schema`.`COLUMNS` WHERE TABLE_SCHEMA='blog' AND TABLE_NAME='posts' ORDER BY ORDINAL_POSITION;
+SHOW INDEXES FROM `posts` FROM `blog`;
+SELECT * FROM information_schema.REFERENTIAL_CONSTRAINTS WHERE   CONSTRAINT_SCHEMA='blog'   AND TABLE_NAME='posts'   AND REFERENCED_TABLE_NAME IS NOT NULL;
+SELECT * FROM information_schema.KEY_COLUMN_USAGE WHERE   TABLE_SCHEMA='blog'   AND TABLE_NAME='posts'   AND REFERENCED_TABLE_NAME IS NOT NULL;
+SHOW CREATE TABLE `blog`.`posts`;
+SELECT CONSTRAINT_NAME, CHECK_CLAUSE FROM `information_schema`.`CHECK_CONSTRAINTS` WHERE CONSTRAINT_SCHEMA='blog' AND TABLE_NAME='posts';
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `blog`.`posts`;
+SELECT  `title`, LEFT(`body`, 256),  `id`,  `created_at`,  `updated_at` FROM `blog`.`posts` LIMIT 1000;
+SHOW CHARSET;
